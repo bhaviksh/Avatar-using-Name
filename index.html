@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Avators using name</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+
+        <div class="container">
+            <div class="details">
+                <h1>Let's Check your <span>Avators</span> using your Name</h1>
+                <input type="text" id="name" placeholder="Enter your name here">
+            
+            <div class="image">
+                <img src="" alt="" class="imageid">
+            </div>
+            <button>Hit Me!</button>
+        </div>
+    </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                const name = $('#name').val();
+                $('.imageid').attr('src', `https://joeschmoe.io/api/v1/random${name}`);
+
+            });
+        });
+    </script>
+</body>
+
+</html>
